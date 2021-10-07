@@ -18,7 +18,7 @@ function Card(props) {
         )
     })
     return (
-        <div className ='flex'>
+        <div className ='grid'>
             {cardList}
         </div>
     )
