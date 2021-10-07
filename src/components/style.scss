@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin grid($tempCol, $pad) {
+    display: grid;
+    grid-template-columns: $tempCol;
+    padding: $pad;
+}
+
+@mixin mQ($respond){
+    @media (max-width: $respond){
+        @content;
+    }
+}
+
+.container{
+    max-width: 1150px;
+    width: 80%;
+    margin: auto;
+}
+
+.flex{
+    @include grid(repeat(3,1fr), 3rem);
+        @include mQ(800px){
+            @include grid(repeat(2,1fr), 3rem)
+        }
+        @include mQ(500px){
+            @include grid(1fr, 3rem)
+        }
+}
+
+.box{
+    height: 350px;
+    width: 350px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,.5);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    .box-con{
+        display: flex;
+    }
+
+    img{
+        width: 100%;
+    }
+    p{
+        margin-left: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 800px){
+    
+}
