@@ -45,12 +45,6 @@
   margin-bottom: 2rem;
 }
 
-.box .box-con {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .box img {
   width: 100%;
 }
